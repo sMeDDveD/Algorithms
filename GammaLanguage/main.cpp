@@ -1,3 +1,4 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 #include <algorithm>
 #include <cstring>
@@ -39,8 +40,8 @@ int binary_search(text* arr, size_t n, int key) {
 }
 
 int main() {
-	freopen("input.txt", "r", stdin);
-	freopen("output.txt", "w", stdout);
+	freopen("..\\input.txt", "r", stdin);
+	freopen("..\\output.txt", "w", stdout);
 
 	int n, m, now;
 	cin >> n >> m;
@@ -68,9 +69,10 @@ int main() {
 
 	int max = 0;
 	for (int i = 0; i < rs; i++) {
-		int to_insert = upper_bound(result, result + rs + 1, inter[i]) - result;
+		int to_insert = static_cast<int>(upper_bound(result, result + rs + 1, inter[i]) - result);
 		result[to_insert] = inter[i];
 		if (to_insert > max) max = to_insert;
 	}
 	cout << max << endl;
+	return 0;
 }
