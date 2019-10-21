@@ -3,6 +3,7 @@
 ## Dynamic programming
 - Matrix multiplication
 - Solitaire
+- Gamma language
 ## Data sctructures
 - Binary heap
 - Huffman coding
